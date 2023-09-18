@@ -1,7 +1,7 @@
 ---
 title: Práctica 1 - Basic Vacuum Cleaner
 layout: post
-post-image: "https://raw.githubusercontent.com/thedevslot/WhatATheme/master/assets/images/SamplePost.png?token=AHMQUEPC4IFADOF5VG4QVN26Z64GG"
+post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RM_img.jpg?raw=true"
 description: Programing a basic vacuum cleaner by myself.
 tags:
 - Basic Vacuum Cleaner
