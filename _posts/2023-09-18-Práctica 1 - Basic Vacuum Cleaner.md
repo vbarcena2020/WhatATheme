@@ -1,23 +1,24 @@
 ---
-title: Sample Post
+title: Práctica 1 - Basic Vacuum Cleaner
 layout: post
 post-image: "https://raw.githubusercontent.com/thedevslot/WhatATheme/master/assets/images/SamplePost.png?token=AHMQUEPC4IFADOF5VG4QVN26Z64GG"
-description: A sample post to show how the content will look and how will different
-  headlines, quotes and codes will be represented.
+description: Programing a basic vacuum cleaner by myself.
 tags:
-- sample
+- Basic Vacuum Cleaner
 - post
-- test
+- Robótica Móvil
+- Unibotics
+- Python
+- Docker
 ---
 
-This post will show you how the content will look like in the post pages and how the headlines, quotes and quotes will be represented. Jekyll is mainly used to write simple markdown and after that it renders out a static pages, so you need to know the basics of writing markdown for that.
-For more information about writing markdown you can checkout the following markdown cheatsheets:
+This post will show you how I progress in my task to program a basic vacuum cleaner:
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * [Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 
 ---
-
+<!-- 
 # This is the h1 text
 ## This is the h2 text
 ### This is the h3 text
@@ -68,4 +69,4 @@ Donec imperdiet, lectus eget congue cursus, dolor enim finibus risus, ut molesti
 <iframe src="https://giphy.com/embed/ZqlvCTNHpqrio" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/laughing-despicable-me-minions-ZqlvCTNHpqrio">via GIPHY</a></p>
 
 **YouTUbe Videos will look like:**<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jTPXwbDtIpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jTPXwbDtIpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->

@@ -41,11 +41,15 @@ google-analytics: UA-163806439-1
 disqus-shortname: abito2
 
 # Name of the Author
-author-name: Abito2(vbarcena2020)
+author-name: vbarcena2020(abito2)
 # URL for the Image of the Author
 author-image: assets/images/deku.jpg
 # 60 Words About the Author
-author-about: Víctor Bárcena Mena (abito2) a student in software robotics engineering, at King Juan Carlos University, Spain. Member of Robotech association and winner of European RoboCup@Home Education 2022, Portugal.
+author-about: I am a student in software robotics engineering, at King Juan Carlos University, Spain.
+author-about1: I member of Robotech association and member of Nocom-pila, winner of European RoboCup@Home Education 2022, Portugal.
+author-about2: I am going to use this blog to publish my progress in some proyects or subjects like "Robótica móvil".
+author-about3: "My skills:"
+
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: https://github.com/vbarcena2020
 
