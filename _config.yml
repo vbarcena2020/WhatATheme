@@ -11,14 +11,14 @@ title: Víctor Bárcena Mena (abito2)
 # Description of the Site
 description: My personal page
 # URL of Image of the Site
-site-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/portada_img.png?raw=true"
+site-image: /WhatATheme/assets/images/tbate.jpg
 # Keywords of the Site
 site-keywords: Site
 # URL for the Image of custom Favicon
 favicon-url: 
 
 # URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
-heroimage: assets/images/portada_img.png
+heroimage: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/portada_img.png?raw=true"
 
 # Social Media and Contact
 # If you don't want to use any icon, you can leave them blank.
