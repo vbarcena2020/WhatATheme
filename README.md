@@ -1,7 +1,7 @@
 # My personal page
 Implemented **WhatATheme** a customizable Jekyll Portfolio theme which supports blogging, to create my personal page.
 
-#### You can checkout the [**Demo Here**](https://thedevslot.github.io/WhatATheme/) :boom:
+![My_personal_page](assets/images/site_image.png)
 
 # Features :sparkles:
 * Free and Easy setup
