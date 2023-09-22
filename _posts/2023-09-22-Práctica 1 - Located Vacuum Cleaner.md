@@ -1,18 +1,18 @@
 ---
-title: Práctica 1 - Basic Vacuum Cleaner
+title: Práctica 1 - Located Vacuum Cleaner
 layout: post
-post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RM_img.jpg?raw=true"
-description: Programing a basic vacuum cleaner by myself.
+post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RdS_img.jpg?raw=true"
+description: Programing a located vacuum cleaner by myself.
 tags:
-- Basic Vacuum Cleaner
+- located Vacuum Cleaner
 - post
-- Robótica Móvil
+- Robótica de Servicios
 - Unibotics
 - Python
 - Docker
 ---
 
-This post will show you how I progress in my task of subject "Robótica Móvil" to program a basic vacuum cleaner:
+This post will show you how I progress in my task of subject "Robótica de Servicios" to program a located vacuum cleaner:
 * [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 * [Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
 * [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
