@@ -22,6 +22,13 @@
                 <i class="fab fa-twitter"></i>Tweet me on Twitter
             </a>
             {% endunless %}
+            {% unless site.linktree_id == %}
+            <a id="contact-button" href="https://linktr.ee/{{site.linktree_id}}"
+                class="button is-rounded is-uppercase has-text-weight-normal is-white is-outlined has-text-weight-semibold column is-two-fifths"
+                target="_blank">
+                <i class="fas fa-link"></i>Show more in my linktree
+            </a>
+            {% endunless %}
             <hr>
             <h3 class="is-size-5 is-uppercase has-text-weight-semibold has-text-white is-marginless">
                 You Can find me here
@@ -56,6 +63,9 @@
                 {% endunless %}-->
                 {% unless site.spotify_username ==  %}
                 <a href="http://open.spotify.com/user/{{site.spotify_username}}" target="_blank" class="has-text-white"><i class="fab fa-spotify"></i></a>
+                {% endunless %}
+                {% unless site.linktree_id ==  %}
+                <a href="https://linktr.ee/{{site.linktree_id}}" target="_blank" class="has-text-white"><i class="fas fa-link"></i></a>
                 {% endunless %}
             </div>
         </div>

@@ -10,6 +10,7 @@ tags:
 - Unibotics
 - Python
 - Docker
+- Práctica 1
 ---
 
 This post will show you how I progress in my task of subject "Robótica de Servicios" to program a located vacuum cleaner:

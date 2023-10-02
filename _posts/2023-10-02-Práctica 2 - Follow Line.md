@@ -1,27 +1,26 @@
 ---
-title: Práctica 1 - Basic Vacuum Cleaner
+title: Práctica 2 - Follow Line
 layout: post
 post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RM_img.jpg?raw=true"
-description: Programing a basic vacuum cleaner by myself.
+description: Programing a follow line with PID by myself.
 tags:
-- Basic Vacuum Cleaner
+- Follow Line
+- PID
 - Post
 - Robótica Móvil
 - Unibotics
 - Python
 - Docker
-- Laser 
-- Bumper
-- Práctica 1
+- Práctica 2
 ---
 
-This post will show you how I progress in my task of subject "Robótica Móvil" to program a basic vacuum cleaner:
+This post will show you how I progress in my task of subject "Robótica Móvil" to program a follow line with a PID:
 
 ---
 
-# **Basic Vacuum Cleaner**
+# **Follow Line**
 ## Planning the Implementation
-To do this task I have decided to divide it into two parts that match the sensors used, the bumper and the laser:  
+<!-- To do this task I have decided to divide it into two parts that match the sensors used, the bumper and the laser:  
 #### Bumper:  
 One of the sensors is the bumper. The bumper is a semicircular piece located on the front of the robot which sends signals if it is pressed. The bumper returns two values ​​mainly. The first tells you if it has been pressed or not and the second tells you where it has been pressed.
 Using these two values ​​you can make a state machine that advances until the robot crashes and turns when it does so in the opposite direction to where it was hit.
@@ -141,4 +140,4 @@ This video shows two simulations of the pseudorandom algorithm with different pr
 **Simulation Video**
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VDgjHM2GMqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-
+ -->
