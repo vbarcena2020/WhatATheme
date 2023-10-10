@@ -4,14 +4,13 @@ layout: post
 post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RM_img.jpg?raw=true"
 description: Programing a follow line with PID by myself.
 tags:
-- Follow Line
+- Práctica 2 - Follow Line
 - PID
 - Post
 - Robótica Móvil
 - Unibotics
 - Python
 - Docker
-- Práctica 2
 ---
 
 This post will show you how I progress in my task of subject "Robótica Móvil" to program a follow line with a PID:
@@ -19,125 +18,193 @@ This post will show you how I progress in my task of subject "Robótica Móvil" 
 ---
 
 # **Follow Line**
+This task presents us with the situation of a Formula 1 circuit with a red line in the middle of the road. The task is program the F1 car to follow line with a PID implemented.
+
 ## Planning the Implementation
-<!-- To do this task I have decided to divide it into two parts that match the sensors used, the bumper and the laser:  
-#### Bumper:  
-One of the sensors is the bumper. The bumper is a semicircular piece located on the front of the robot which sends signals if it is pressed. The bumper returns two values ​​mainly. The first tells you if it has been pressed or not and the second tells you where it has been pressed.
-Using these two values ​​you can make a state machine that advances until the robot crashes and turns when it does so in the opposite direction to where it was hit.
+The method that I have decided to implement is a reactive system with a PID controler.
 
+While the car sense the image, get the line and the centoid then the car move but the move is controled by the PID which set the angular and linear velocity depending on the error sensed.
 
-#### Laser:  
-The other sensor is the laser. The laser used in this practice is a 360 degree laser. But I am only going to focus on the first 180 degrees. Since the only values ​​that interest me are those found on the front because I am going to use them to detect if there is any object in front.
+## Method Implementation
+In this practice I will perform three subtasks, obtein and process the image and get the centroid, get the motion PIDs and perform the motion.
 
+#### Image Process:
+Firstly, I need to get the line I want to follow, so I will use opencv to get the image in RBG. After that I print a rectangle at the top of the image to keep only the values ​​close to the wheels of the car and thus obtain a better point to follow. Then I will convert the image from RGB to HSV because the filter wont be affected if the brightness or intensity of the color change.
 
-## Method Implemented
-The method that I have decided to implement is a state machine with only three states:
-- State 1: This is the state that is responsible for making the robot move in a spiral and thus cover a lot of ground. But this only works on its own in large, circular environments with few or no obstacles. That is why two other states are needed.
-- State 2: This state is responsible for acting in the event that the robot collides with or is approaching an object from the front. If any of these cases occur, the robot will stop advancing and will proceed to rotate for a random time towards the opposite direction of the object.
-- State 3: This is the last of the states and is the one responsible for making the robot advance in a straight line in order to move throughout the environment. This progresses for a while until two situations occur. The first is that it approaches or collides with a wall, which would cause it to change to state 2. The other option is that it randomly goes to state 1, producing a spiral sweep.
+After the implementation of the red filter I get the moments to get the centroid of the line. 
+
+#### Motion Process
+With the centroid of the line and the width of the image I can get a diference or error to use it to know where is the car in reference to the line. Knowing this I can move the car to follow the line.
+
+To get the values for the motion I decided to used two PIDs controllers to implement the movement of the car. Whith those PID's the movement will be more smooth, it won't crash to the wall and it could go faster. I want to do two diferents PID, one to get the linear speed and to get the angular speed. 
+
+#### Linear PID:  
+In this PID I will modify the linear velocity.
+
+The proportional controller is obtained by multiplying the error (the car position - the line centroid) by a constant "Kp". The constant "Kp" is found by testing which works better in my algorithm. If the speed is low the solution is better but if the speed increases the solution start to oscillate.
+
+The integral controller is obteined by multiplying the acumulation of errors (the car position - the line centroid) by a constant "Ki". The constant "Ki" is found by testing which works better in my algorithm.
+
+The derivative controller is obteined by multiplying the diferrence between the last error and the actual error (the car position - the line centroid) by a constant "Kd". The constant "Kd" is found by testing which works better in my algorithm. Also if "Kd" is to big, sometimes your turn velocity will increase so fast, and will make your car to turn and hit the wall.
+
+Finaly the output value the PID return is the diference between the maximun linear velocity and the summation of the three controllers values goten.
+
+Also if the value is over the maximun value or below the minimun value the PID controler return the minimun or maximun value.
+
+#### Angular PID:  
+In this PID I will modify the angular velocity.
+
+The proportional controller is obtained by multiplying the error (the car position - the line centroid) by a constant "Kp". The constant "Kp" is found by testing which works better in my algorithm. If the speed is low the solution is better but if the speed increases the solution start to oscillate.
+
+The integral controller is obteined by multiplying the acumulation of errors (the car position - the line centroid) by a constant "Ki". The constant "Ki" is found by testing which works better in my algorithm.
+
+The derivative controller is obteined by multiplying the diferrence between the last error and the actual error (the car position - the line centroid) by a constant "Kd". The constant "Kd" is found by testing which works better in my algorithm. Also if "Kd" is to big, sometimes your turn velocity will increase so fast, and will make your car to turn and hit the wall.
+
+Finaly the output value the PID return is the summation of the three controllers values goten.
+
+Also if the value is over the maximun value or below the minimun value the PID controler return the minimun or maximun value.
 
 ## Used Libraries
-The code libraries that I have used are rospy and random: 
-- The random library, as its name indicates, I have used to generate random numbers to produce the randomness of the pseudorandom algorithm. 
-- I have used the rospy library to obtain the elapsed time and thus be able to control the spinning time in state 2.
+The code libraries that I have used are numpy and opencv2: 
+- The numpy library, is used to set the arrays. 
+- I have used the opencv2 (cv2) library to obtain and process the image and extract the points of interest from the image and values ​​obtained by the car camera.
 
 
 ## Code Functions
-For this task I only needed to create a function separate from the main function. This function, called laser, is a function that is responsible for verifying whether a wall or object has been detected within a specific range (in this case 0.3 meters). I have implemented this function in order to have a better structure of the code.
+For this task I needed to create two functions and a class with his init and two expecific functions for the PIDs. 
 
+The first function, called "movement", is a function that is responsible to calculate the error, then obtaine the velocities form the PID and finaly set them.
 
-In this I have implemented a scan in two 45 degree fans with respect to the front angle of the laser. This allows me to detect which direction the object or wall is approaching.
-
-- **Laser function:**
+- **Movement function:**
  
-        def laser(laser_data):
-            left_detected = False
-            rigth_detected = False
-            detected = False
-            # Look at the front left
-            for i in range(90, 135):
-                if(laser_data.values[i] < 0.3):
-                    left_detected = True
-            # Look at the front rigth        
-            for i in range(45, 90):
-                if(laser_data.values[i] < 0.3):
-                    rigth_detected = True
-            # Change if something is detected
-            if (rigth_detected or left_detected):
-                detected = True
-                
-            return detected
+        def movement(cX):
+            error = (378 - cX)
+            if (error > 0):
+                error = error / (378)
+            else:
+                error = error / (640 - 378)
 
+            linear_vel = linear_pid.get_linear(error)
+            angular_vel = angular_pid.get_angular(error)
 
-## Code States
-The three states are inside an infinite loop to perform the algorithm infinitely. At each iteration of the loop I call the functions to obtain both the status of the bumper, the laser data and whether the laser has detected. Afterwards it will move to one of the states. 
+            HAL.setV(linear_vel)
+            HAL.setW(angular_vel)
 
-- **Function calls:**
+The second function, called "image_processing", is a function that is responsible to get the image, process it to get the red line and its centroid.
 
-        bumper_pressed = HAL.getBumperData().state
-        laser_data = HAL.getLaserData()
-        detected = laser(laser_data)
+- **Image_processing function:**
+        def image_processing(cX):
+            image = HAL.getImage() 
+            heigth, width, channels = image.shape
 
-- **State1 code (Make the spiral):**
-  
-        if(state == 1 and bumper_pressed == 0 and detected == False):
-            HAL.setV(v)
-            HAL.setW(w)
-            v += 0.0125
-
-
-- **State2 code (Recover if it detected and object or it hit a wall):** 
-
-        elif(HAL.getBumperData().state == 1 or detected == True):
-            state = 2   
-            v = 0
-            w = 3
-            HAL.setV(v)
-            bump = HAL.getBumperData().bumper
-
-            # Turn 
-            if(bump == 0 or left_detected):
-                HAL.setW(w)
-            elif(bump != 0 or rigth_detected):
-                HAL.setW(-w)
-
-            time1 = rospy.Time.now()
-            time2 = rospy.Time.now()
-
-            # Wait some time randomly
-            while(time2.secs - time1.secs < random.uniform(0.5, 2.5)):
-                time2 = rospy.Time.now()
-            state = 3
-
-  
-- **State3 code (Go forward)** 
-
-        elif(state == 3):
-            v = 3.0
-            w = 0.0
-            HAL.setV(v)
-            HAL.setW(w)
-            ran = random.random()
+            image = cv2.rectangle(image, (0, 0), (width, 350), (0,0,0), -1)
             
-            # Change to state 1 randomly       
-            if(ran > 0.985):
-                state = 1
-                v = 0
-                w = 3
+            hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
+            
+            img = cv2.inRange(hsv, np.array([0, 50, 50]), np.array([10, 255, 255]))
 
+            M = cv2.moments(img)
+
+            try:
+                cX = int(M["m10"] / M["m00"])
+            except ZeroDivisionError:
+                cX = cX
+            
+            return img, cX
+
+The PIDControler is a class defined to calculate the PID velocities more easily. This class id formed by the "_init_" function (constructor) and the functions "get_angular" and "get linear"
+
+- **Init function:**
+
+        def __init__(self, KP, KI, KD, min_ref, max_ref, min_v, max_v):
+            # PIDControlers contructor
+            self.KP_ = KP
+            self.KI_ = KI
+            self.KD_ = KD
+            self.min_v_ = min_v
+            self.max_v_ = max_v
+            self.min_ref_ = min_ref
+            self.max_ref_ = max_ref
+            self.int_error_ = 0.0
+            self.prev_error_ = 0.0
+
+- **Anfular PID function:**
+
+        def get_angular(self, error):
+            # PID for angular speed
+            error_ = error
+            output = 0.0
+
+            # Proportional Error
+            direction = 0.0
+            if error_ != 0.0:
+                direction = error_ / abs(error_)
+
+            if abs(error_) < self.min_ref_:
+                output = 0.0
+            elif abs(error_) > self.max_ref_:
+                output = direction * self.max_v_
+            else:
+                output = (direction * self.min_v_ + error_ * (self.max_v_ - self.min_v_))
+
+            # Integral Error
+            self.int_error_ = (self.int_error_ + output) * 2.0 / 3.0
+
+            # Derivative Error
+            deriv_error = output - self.prev_error_
+            self.prev_error_ = output
+
+            output = (self.KP_ * output + self.KI_ * self.int_error_ + self.KD_ * deriv_error)
+            
+            # Limitar la salida a los valores máximos y mínimos
+            return max(min(output, self.max_v_), -self.max_v_)
+
+- **Linear PID function:**
+
+        def get_linear(self, error):
+            #PID for linear speed
+            error_ = abs(error)
+            output = 0.0
+
+            # Proportional Error
+            if abs(error_) < self.min_ref_:
+                output = 0.0
+            elif abs(error_) > self.max_ref_:
+                output = self.max_v_
+            else:
+                output = (self.min_v_ + error_ * (self.max_v_ - self.min_v_))
+
+            # Integral Error
+            self.int_error_ = (self.int_error_ + output) * 2.0 / 3.0
+
+            # Derivative Error
+            deriv_error = output - self.prev_error_
+            self.prev_error_ = output
+
+            output = self.max_v_ - (self.KP_ * output + self.KI_ * self.int_error_ + self.KD_ * deriv_error)
+
+            # Limitar la salida a los valores máximos y mínimos
+            return max(min(output, self.max_v_), self.min_v_)
+
+
+Also I have to mention that if you modify the PIDs constants and the linear and angular speeds the car will finish the circuit faster. I used this values due to they were the best after many attempts and simulations. 
 
 ## Gifts and videos
 
-There is a gift which shows a test of the three states of the state machine. The spiral, the recovery if you find an object or hit a wall and going forward.  
-**Gif of the three states:**<br>
-<iframe src="https://cdn.discordapp.com/attachments/828395914145431612/1156626403991769098/p1_gif.gif?ex=6515a7c7&is=65145647&hm=065419dcd11567e5315de08ef080dc557b4b0453195c3ed5fd99bdb23cc45906&" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/p1_gif.gif"></a></p>
+There are some gifts which shows the car following the line.  
+**Gif of the camera filter:**<br>
+<iframe src="https://cdn.discordapp.com/attachments/828395914145431612/1161353413284610149/img.gif?ex=6537fda6&is=652588a6&hm=714ff91de3395b82edf0059baf364f3afb3fa0e97245ffe5d1f6895b72ab4fd2&" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/rm_p2_img.gif"></a></p>
 
-This video shows two simulations of the pseudorandom algorithm with different probabilities of the spiral occurring. 
-- When the probability is greater, the robot cleans an area several times but has a harder time moving around the entire house, although it does so over time.
-- While when the probability is lower, it moves throughout the house more quickly but takes longer to clean an entire area perfectly.
+**Gif of gazebo:**<br>
+<iframe src="https://cdn.discordapp.com/attachments/828395914145431612/1161353413708238948/video.gif?ex=6537fda6&is=652588a6&hm=991236c3593ff1d12aefe726709dee177870db2a2a359a4b725c18619dc75067&" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/rm_p2_video.gif"></a></p>
 
+
+This video shows three simulations of the follow line. 
+- When the computer records the simulation slowing down the simulation.
+- When the phone record the simulation with the car image output.
+- When the phone record the simulation without the car image output been this the fastest simulation.
 
 **Simulation Video**
 <br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VDgjHM2GMqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
- -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HTfGv62qNIs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+ 

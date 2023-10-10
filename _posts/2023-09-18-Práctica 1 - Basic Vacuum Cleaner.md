@@ -4,7 +4,7 @@ layout: post
 post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RM_img.jpg?raw=true"
 description: Programing a basic vacuum cleaner by myself.
 tags:
-- Basic Vacuum Cleaner
+- Práctica 1 - Basic Vacuum Cleaner
 - Post
 - Robótica Móvil
 - Unibotics
@@ -12,7 +12,6 @@ tags:
 - Docker
 - Laser 
 - Bumper
-- Práctica 1
 ---
 
 This post will show you how I progress in my task of subject "Robótica Móvil" to program a basic vacuum cleaner:

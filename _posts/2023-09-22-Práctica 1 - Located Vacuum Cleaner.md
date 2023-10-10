@@ -4,13 +4,12 @@ layout: post
 post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RdS_img.jpg?raw=true"
 description: Programing a located vacuum cleaner by myself.
 tags:
-- located Vacuum Cleaner
+- Práctica 1 - Located Vacuum Cleaner
 - post
 - Robótica de Servicios
 - Unibotics
 - Python
 - Docker
-- Práctica 1
 ---
 
 This post will show you how I progress in my task of subject "Robótica de Servicios" to program a located vacuum cleaner:
