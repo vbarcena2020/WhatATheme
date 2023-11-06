@@ -33,7 +33,7 @@ Firstly, I need to get the line I want to follow, so I will use opencv to get th
 
 After the implementation of the red filter I get the moments to get the centroid of the line. 
 
-#### Motion Process
+#### Motion Process:
 With the centroid of the line and the width of the image I can get a diference or error to use it to know where is the car in reference to the line. Knowing this I can move the car to follow the line.
 
 To get the values for the motion I decided to used two PIDs controllers to implement the movement of the car. Whith those PID's the movement will be more smooth, it won't crash to the wall and it could go faster. I want to do two diferents PID, one to get the linear speed and to get the angular speed. 
@@ -192,19 +192,20 @@ Also I have to mention that if you modify the PIDs constants and the linear and 
 ## Gifts and videos
 
 There are some gifts which shows the car following the line.  
+
 **Gif of the camera filter:**<br>
 <iframe src="https://cdn.discordapp.com/attachments/828395914145431612/1161353413284610149/img.gif?ex=6537fda6&is=652588a6&hm=714ff91de3395b82edf0059baf364f3afb3fa0e97245ffe5d1f6895b72ab4fd2&" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/rm_p2_img.gif"></a></p>
 
 **Gif of gazebo:**<br>
 <iframe src="https://cdn.discordapp.com/attachments/828395914145431612/1161353413708238948/video.gif?ex=6537fda6&is=652588a6&hm=991236c3593ff1d12aefe726709dee177870db2a2a359a4b725c18619dc75067&" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/rm_p2_video.gif"></a></p>
 
+**Simulation Video**
 
 This video shows three simulations of the follow line. 
 - When the computer records the simulation slowing down the simulation.
 - When the phone record the simulation with the car image output.
 - When the phone record the simulation without the car image output been this the fastest simulation.
 
-**Simulation Video**
 <br>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HTfGv62qNIs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
  
