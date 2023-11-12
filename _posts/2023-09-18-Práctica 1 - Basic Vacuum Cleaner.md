@@ -39,6 +39,8 @@ The method that I have decided to implement is a state machine with four states:
 - State 3: After going back the robot will start to rotate for a random time towards the opposite direction of the object.
 - State 4: This is the last of the states and is the one responsible for making the robot advance in a straight line in order to move throughout the environment. This progresses for a while until two situations occur. The first is that it approaches or collides with a wall, which would cause it to change to state 2. The other option is that it randomly goes to state 1, producing a spiral sweep.
 
+![State diagram](https://cdn.discordapp.com/attachments/828395914145431612/1173315422037217450/drigrama_de_estados.png?ex=65638223&is=65510d23&hm=968fdb7fb037d751a2da984367462dbc17d4dfe43acb9e8c50edb433f91fcf22&)
+
 ## Used Libraries
 The code libraries that I have used are rospy and random: 
 - The random library, as its name indicates, I have used to generate random numbers to produce the randomness of the pseudorandom algorithm. 
