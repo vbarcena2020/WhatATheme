@@ -2,7 +2,7 @@
 title: Práctica 2 - Rescue People
 layout: post
 post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RdS_img.jpg?raw=true"
-description: Programing a located vacuum cleaner by myself.
+description: Programing a recue people with dron by myself.
 tags:
 - Práctica 2 - Rescue People
 - post
@@ -12,7 +12,7 @@ tags:
 - Docker
 ---
 
-This post will show you how I progress in my task of subject "Robótica de Servicios" to program a dron qho will rescue some people in the sea:
+This post will show you how I progress in my task of subject "Robótica de Servicios" to program a dron who will rescue some people in the sea:
 
 ---
 

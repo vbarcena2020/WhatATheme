@@ -2,7 +2,7 @@
 title: Práctica 3 - Obstacle Avoidance
 layout: post
 post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/RM_img.jpg?raw=true"
-description: Programing a follow line with PID by myself.
+description: Programing a obstacle avoidance by myself.
 tags:
 - Práctica 3 - Obstacle Avoidance
 - Lidar

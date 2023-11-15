@@ -13,9 +13,6 @@ tags:
 ---
 
 This post will show you how I progress in my task of subject "Robótica de Servicios" to program a located vacuum cleaner:
-* [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
-* [Markdown Guide](https://www.markdownguide.org/cheat-sheet/)
-* [GitHub Flavored Markdown Spec](https://github.github.com/gfm/)
 
 ---
 <!-- 
