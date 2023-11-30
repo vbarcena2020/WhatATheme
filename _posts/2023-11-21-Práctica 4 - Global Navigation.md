@@ -5,6 +5,7 @@ post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets
 description: Programing a global navigation by myself.
 tags:
 - Práctica 4 - Global Navigation
+- Gradient Path Planning
 - Lidar
 - Post
 - Robótica Móvil
