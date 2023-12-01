@@ -270,6 +270,8 @@ In my case I have decided to propose this practice as a state machine with a tot
 
 In addition I have implemented two threads and an interrupt. Also I use watchdog to avoid locks.
 
+![](https://cdn.discordapp.com/attachments/828395914145431612/1180104126621827143/SETR_states.png?ex=657c349d&is=6569bf9d&hm=c1953b1b29c52bd58ba13246195cc7863985178a0508e99e0d6f9fd16d6471ee&)
+
 #### State 1 "arranque"
 
 State one or "arranque" is responsible for turning blue LED 1 on and off three times at intervals of one second, while displaying "Cargando..." on the LCD.
@@ -288,6 +290,8 @@ Substate 3: is responsible for displaying "Preparando Cafe …" on the LCD for a
 
 Substate 4: is responsible for displaying "RETIRE BEBIDA" on the LCD for 3 seconds and returning to the substate 1
 
+![](https://cdn.discordapp.com/attachments/828395914145431612/1180104126294675506/service_states.png?ex=657c349c&is=6569bf9c&hm=a455edf20b818a03461a48d72eb56747ccdac59a9c89557308caf3af0202bc8c&)
+
 #### State 3 "admin"
 
 This state has six substates.
@@ -305,6 +309,8 @@ Substate 5: is responsible for displaying the other products list on the LCD unt
 Substate 6: is responsible for displaying the products list on the LCD until the joystick button is detected and remove this product to the products list and add it to the other products list.
 
 In all substates except the substate 1 if the joystick detects that it has been moved to the right, it will return to the previous state.
+
+![](https://cdn.discordapp.com/attachments/828395914145431612/1180104126009450578/admin_states.png?ex=657c349c&is=6569bf9c&hm=588e8b5b5c2d904814bdd8e2fc15064dba09f70b730af73d34b0f687f9aea129&)
 
 #### Threads
 
