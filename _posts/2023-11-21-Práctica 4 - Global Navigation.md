@@ -146,7 +146,7 @@ Also you can modify the values of the range to look for the lowest cost around a
 
 There is a gift which shows the gradient path planning.
 
-**Gif of the obstacle avoidance:**<br>
+**Gif:**<br>
 <iframe src="https://cdn.discordapp.com/attachments/828395914145431612/1176648889944772628/gif_gpp.gif?ex=656fa2ac&is=655d2dac&hm=9d87604ac2841580af16a191a7cf1906e06235430e5a680090792ee8b1b89e02&" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/rm_p4.gif"></a></p>
 
 **Simulation Video**

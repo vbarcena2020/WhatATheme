@@ -15,55 +15,58 @@ tags:
 This post will show you how I progress in my task of subject "Robótica de Servicios" to program a located vacuum cleaner:
 
 ---
-<!-- 
-# This is the h1 text
-## This is the h2 text
-### This is the h3 text
-#### This is the h4 text
-##### This is the h5 text
-###### This is the h6 text
 
-**Bold Text in the post will look like:**<br>
-**This text is Bold**
+# **Located Vacuum Cleaner**
+This task presents us with the situation the situation of a vacuum cleaner which must clean the house by locating it using the map.
 
-**Italic Text in the post will look like:**<br>
-*This text is Italic*
+## Planning the Implementation
+The method that I have decided to implement is get the path using opencv and with the path move along the house to clean it.
 
-> Quotes on your post will look like this
+I get the path using BSA in python but not in unibotics because I wanted to watch the where is the path drawing it in the image.
 
-`Codes on your post will look like this`
+## Method Implementation
+In this practice I will perform two subtasks, get the path, follow the path.
 
-**Link in the post will look like:**<br>
-[This is a link](#)
+#### Get the Path
+Fistly, I get the image with opencv and I resized it to 512 x 512 pixels and I erode the walls to avoid being to close to crash with those. 
 
-**Bullet list in the post will look like:**
-* Item 1
-* Item 2
-* Item 3
-* Item 4
-* Item 5
+After knowing the size of the image I divide it in cells of 16 x 16 pixels. 
 
-**Number list in the post will look like:**
-1. Item 1
-2. Item 2
-3. Item 3
-4. Item 4
-5. Item 5
+To draw the path I get the origin point of the robot and draw the cell where it is in blue. The cells that have already been visited are drawn in blue and the cells of neighbors that have not yet been visited are drawn in green.
 
-**Images in the post will look like:**<br>
-![Test Image](/WhatATheme/assets/images/1280x720%20Placeholder.png)
+To move along the house I establish the priority of the following order west, north, east and south. When the robot is surrounded by previously visited places or walls I look for the closest and most accessible neighbor to go to and continue cleaning the house.
 
-**Normal text in the post will look like**<br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id finibus nisl. Etiam in hendrerit est. Nulla non erat ac lectus interdum lobortis. Vestibulum at mi ex. Mauris nisl mi, venenatis et feugiat nec, finibus porttitor velit. Suspendisse tincidunt lobortis leo, quis tristique tellus iaculis quis. Donec eleifend pulvinar gravida. Proin non lorem eros. Donec sit amet finibus ex, eget vestibulum nunc. Ut ut enim id purus porttitor tristique. Vivamus tincidunt eleifend hendrerit. Proin metus felis, ultrices vel dui in, porta dapibus dui. Sed sagittis ex vitae dui tristique dignissim. Cras vel leo ipsum.
+#### Follow the Path
 
-Aenean ac neque et risus mattis accumsan. Sed ac tellus molestie, lacinia ante sit amet, convallis felis. Maecenas aliquet lectus nec euismod auctor. Donec finibus pellentesque tortor, ac efficitur metus suscipit non. Proin diam orci, blandit quis malesuada ac, efficitur a nisl. Mauris eleifend consequat blandit. Sed egestas quam et orci gravida, non euismod metus scelerisque. Curabitur venenatis pellentesque erat commodo pharetra. Fusce id ante nec ipsum fringilla auctor. In justo quam, feugiat placerat eleifend dapibus, luctus et quam. Fusce facilisis erat ut odio convallis viverra et id mauris. Sed vehicula tempus consectetur. Aliquam pharetra, purus non egestas tristique, tellus massa fringilla est, id sagittis tellus urna non mauris. Suspendisse fringilla, velit nec blandit facilisis, ligula ante imperdiet est, et placerat magna sem quis tortor.
+To follow the path I use a reduced one in which all the consecutive repeated movements are put together, obtaining a path with fewer steps.
 
-Vestibulum vitae fermentum velit, rhoncus egestas orci. Nulla at purus ut orci posuere vulputate. In eget leo diam. In congue in diam nec elementum. Suspendisse fringilla ante nulla, eu tristique orci ultrices eget. Aenean non lorem tellus. Vestibulum tempor metus sit amet tellus feugiat, sit amet consequat lacus ultricies.
+To move I convert the pixels to coordinates in the real world and with this coordinates I can go to then and orientate to the next position and follow all the path.
 
-Donec imperdiet, lectus eget congue cursus, dolor enim finibus risus, ut molestie lorem tellus non tortor. Donec quam nibh, molestie in dapibus et, efficitur non tortor. Morbi orci tellus, mollis vel mi vitae, auctor lobortis erat. Ut gravida velit eget ligula lacinia, id rhoncus tellus gravida. Maecenas laoreet rutrum consequat. Suspendisse sed nibh dui. Curabitur dictum euismod mollis. Sed egestas libero libero, eu accumsan augue placerat non. Nunc id condimentum orci. Mauris vitae sollicitudin quam.
+## Used Libraries
+The code libraries that I have used are numpy, math and queue: 
+- The numpy library, is used to set the arrays. 
+- I have used math to calculate all the values needed.
+- Opencv library, to process the image.
 
-**Giphy Gifs will look like:**<br>
-<iframe src="https://giphy.com/embed/ZqlvCTNHpqrio" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/laughing-despicable-me-minions-ZqlvCTNHpqrio">via GIPHY</a></p>
 
-**YouTUbe Videos will look like:**<br>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jTPXwbDtIpA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+## Critical Analysis
+
+Finally, I have to mention that depending on the values of the velocities the robot can lost the point and crash to the walls. 
+
+Also you can modify sizes of the cells or not erode the walls but you risk getting too close to the walls and crashing, even if you get a better sweep of the house, in addition to adding many more steps to the path.
+
+Finally, you can also modify the order of priority you give to the robot's cardinal points, obtaining a different path which can be better or worse, depending on where you start.
+
+
+## Gifts and videos
+
+There is a gift which shows the path creating.
+
+**Gif:**<br>
+<iframe src="https://cdn.discordapp.com/attachments/828395914145431612/1196949070334402592/path.gif?ex=65b97cb0&is=65a707b0&hm=cb43d0b2d7311cf76c59952caa7b7f6db6f185a3d7744a61ca89312ac493b74f&" width="480" height="259" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/rs_p1.gif"></a></p>
+
+**Simulation Video**
+
+This video shows the simulation of create the path and the localized vacuum cleaner in unibotics. 
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3vREMZ11yZE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
