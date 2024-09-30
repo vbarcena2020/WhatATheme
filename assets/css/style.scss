@@ -291,7 +291,7 @@ a.navbar-item.is-active {
 
 #post {
     @media (min-width: 768px) {
-        margin: auto 2.5vmax;
+        margin: 0;
     }
     a {
         text-decoration: underline;
@@ -321,7 +321,7 @@ a.navbar-item.is-active {
             display: inline-block;
         }
         hr{
-            background-color: grey;
+            background-color: rgb(255, 254, 254);
         }
         img, iframe {
             max-width: calc(100% - 25vw);
@@ -344,6 +344,29 @@ a.navbar-item.is-active {
     #disqus_thread {
         margin-top: 5vmax;
     }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff; /* Cambia a tu color deseado */
+    }
+
+    strong, b {
+        font-weight: bold; /* Asegura que el texto sea negrita */
+        color: #ffffff;    /* Cambia a tu color deseado */
+    }
+
+    
+    pre {
+        background-color: #2d2d2d;  /* Cambia el fondo del bloque de código */
+        color: #00FFFF;             /* Color del texto */
+        padding: 1em;               /* Relleno alrededor del bloque de código */
+        border-radius: 8px;         /* Bordes redondeados */
+        overflow-x: auto;           /* Scroll horizontal si es necesario */
+      }
+      
+    pre code {
+    background-color: transparent; /* Evita superposición de fondos */
+    color: inherit;               /* Hereda el color del texto */
+    }
 }
 
 #page-section {
@@ -351,5 +374,14 @@ a.navbar-item.is-active {
         ul, ol, blockquote {
             display: inline-block;
         }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #ffffff; /* Cambia a tu color deseado */
+    }
+
+    strong, b {
+        font-weight: bold; /* Asegura que el texto sea negrita */
+        color: #ffffff;    /* Cambia a tu color deseado */
     }
 }
