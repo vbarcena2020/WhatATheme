@@ -40,7 +40,7 @@ The method that I have decided to implement is a state machine with four states:
 - State 4: This is the last of the states and is the one responsible for making the robot advance in a straight line in order to move throughout the environment. This progresses for a while until two situations occur. The first is that it approaches or collides with a wall, which would cause it to change to state 2. The other option is that it randomly goes to state 1, producing a spiral sweep.
 <br>
 
-<image src="/assets/images/drigrama%20de%20estados.png"></image> 
+<image src="/assets/images/drigrama_de_estados.png"></image> 
 <br>
 
 
