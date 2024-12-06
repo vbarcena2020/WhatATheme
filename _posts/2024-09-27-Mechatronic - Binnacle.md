@@ -2,7 +2,7 @@
 title: Mechatronic - Binnacle
 layout: post
 post-image: "https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/Mecatronica_img2.jpg?raw=true"
-description: Programing an amazon warehouse robot by myself using OMPL to get the path.
+description: Binnacle of the Mechatronic subject.
 tags:
 - Mechatronic - Binnacle
 - post
@@ -15,6 +15,8 @@ tags:
 - Githuh
 - MD / Markdown 
 - VSCode
+- Croquis
+- FreeCAD
 ---
 
 This post will show you how I progress in the subject "Mecatronica" learning new habilities and programs to do different things as 2D design:
@@ -66,7 +68,7 @@ To create and change to the new branch:
 
 These are the basics commands I used.
 
-# **L3, L4 and L5 Learning Inksacape Design 2D**
+# **Learning Inksacape 2D Design**
 Fristly, I download the Inkscape program. 
 Then after learning how to use the program and design some things in 2D I try to create a simple design of the Proyect we are going to create "Proyecto Mano de Zeus". 
 
@@ -75,3 +77,39 @@ The design is the following:
 <br>
 <image src="https://github.com/vbarcena2020/Mecatronica-2024-2025/blob/main/L5/Mano.svg?raw=true"></image> 
 <br>
+
+
+# **Learning FreeCAD 3D Design**
+After learning how to create a simple model of the hand in Inksacape in 2D I try to create a simple structure of all the pieces of which the hand that we want to design and create is composed of. The 
+
+La estructura se encuentra en el siguiente link: ![Mano.FCStd](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/images/Mano.FCStd)
+
+<br>
+<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/simple_mano_3d.png?raw=true"></image> 
+<br>
+
+En cuanto al resto de diseño 3D hemos utilizado Ultimaker Cura para diseñar las piezas basandonos en el proyecto original del cual hemos sacado la idea. Hemos modificado los archivos (.lts) de los componentes aportando diferentes valores para obtener la mejor impresión de las piezas en nuestras impresoras 3D.
+
+# **Making Electronic Design**
+To create and design the electronic circuit, fristly, we have to decide which components we are going to need and use.
+
+For the control of the hardware we are going to use an Arduino UNO which can be replace by an Arduino Mega if we want to add more components. 
+
+<br>
+<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/arduinos.jpg?raw=true"></image> 
+<br>
+
+The rest of components are six servos per hand, one for each finger and other for the wrist. This 360 servos model we are going to use are the tower pro mg996r.
+
+<br>
+<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/servo.jpg?raw=true"></image> 
+<br>
+
+And to connect all the servos and the arduino we use cables and a protoboard.
+
+To visualize the design I use Fritzing and app which allow us create electronic designs, and this is our:
+
+<br>
+<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design.png?raw=true"></image> 
+<br>
+
