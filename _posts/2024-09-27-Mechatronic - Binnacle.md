@@ -113,3 +113,11 @@ To visualize the design I use Fritzing and app which allow us create electronic 
 <image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design.png?raw=true"></image> 
 <br>
 
+After trying the code with this connection the servos move to slow or doesn't have the strong to move the fingers. This happend because the 5V that gives the arduino to the servos is not enough to move the fingers so to fix it I am gonna add a battery to provaid Voltage to the servos.
+
+So the new design is the following:
+
+<br>
+<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design_2.png?raw=true"></image> 
+<br>
+
