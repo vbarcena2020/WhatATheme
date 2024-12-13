@@ -75,19 +75,26 @@ Then after learning how to use the program and design some things in 2D I try to
 The design is the following:
 
 <p align="center">
-  <img src="https://github.com/vbarcena2020/Mecatronica-2024-2025/blob/main/L5/Mano.svg?raw=true" alt="interfaz" width="32.75%">
+  <img src="https://github.com/vbarcena2020/Mecatronica-2024-2025/blob/main/L5/Mano.svg?raw=true" width="32.75%">
 </p>
 
 # **Learning FreeCAD 3D Design**
 After learning how to create a simple model of the hand in Inksacape in 2D I try to create a simple structure of all the pieces of which the hand that we want to design and create is composed of. The 
 
-La estructura se encuentra en el siguiente link: [Mano.FCStd](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/images/Mano.FCStd)
+The structure is in the following link: [Mano.FCStd](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/images/Mano.FCStd)
 
 <p align="center">
-  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/simple_mano_3d.png?raw=true" alt="interfaz" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/simple_mano_3d.png?raw=true" width="32.75%">
 </p>
 
-En cuanto al resto de diseño 3D hemos utilizado Ultimaker Cura para diseñar las piezas basandonos en el proyecto original del cual hemos sacado la idea. Hemos modificado los archivos (.lts) de los componentes aportando diferentes valores para obtener la mejor impresión de las piezas en nuestras impresoras 3D.
+Regarding the rest of the 3D design, we used Ultimaker Cura to design the parts based on the original project from which we drew inspiration. We modified the (.lts) component files by applying different values to achieve the best print quality on our 3D printers.
+
+Also I have added a wrist and arm, connect all the blocks and create a plane.
+
+<p align="center">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/mano_plano.svg?raw=true" width="60%">
+</p>
+
 
 # **Making Electronic Design**
 To create and design the electronic circuit, fristly, we have to decide which components we are going to need and use.
@@ -95,19 +102,19 @@ To create and design the electronic circuit, fristly, we have to decide which co
 For the control of the hardware we are going to use an Arduino UNO which can be replace by an Arduino Mega if we want to add more components. 
 
 <p align="center">
-  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/arduinos.jpg?raw=true" alt="interfaz" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/arduinos.jpg?raw=true" width="32.75%">
 </p>
 
 The rest of components are six servos per hand, one for each finger and other for the wrist. This 360 servos model we are going to use are the tower pro mg996r.
 
 <p align="center">
-  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/servo.jpg?raw=true" alt="interfaz" width="22.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/servo.jpg?raw=true" width="22.75%">
 </p>
 
 Also we have to use a battery to suply the servos with the energy needed.
 
 <p align="center">
-  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/battery.png?raw=true" alt="interfaz" width="22.75%">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/battery.png?raw=true" width="22.75%">
 </p>
 
 And to connect all the components we use cables and a protoboard.
@@ -115,7 +122,7 @@ And to connect all the components we use cables and a protoboard.
 To visualize the design I use Fritzing and app which allow us create electronic designs, and this is our:
 
 <p align="center">
-  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design.png?raw=true" alt="interfaz" width="42.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design.png?raw=true" width="42.75%">
 </p>
 
 
@@ -124,7 +131,7 @@ After trying the code with this connection the servos move to slow or doesn't ha
 So the new design is the following:
 
 <p align="center">
-  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design_2.png?raw=true" alt="interfaz" width="42.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design_2.png?raw=true" width="42.75%">
 </p>
 
 # Zeus Hand Code
@@ -215,14 +222,14 @@ The first idea was to write the angles using a keyboard. This was the simplest o
 The next idea was to develop sliders for all the servos and send the respective values instead of writing them. This method was simple and faster. However, although it wasn’t convenient or quick enough for the project’s goal, we kept it as a testing tool in a separate mode.
 
 <p align="center">
-  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_manual.png?raw=true" alt="detect_manual" width="15.5%">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_manual.png?raw=true" width="15.5%">
 </p>
 
 Finally, after much thought, we came up with an idea inspired by a course we took called Computer Vision: using a camera to capture an image of our arms and, from that image, calculating the finger angles. This approach provided constant and fast detection. The only drawback was that it was more complex to develop, but we eventually succeeded.
 
 <p align="center">
-  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_image.png?raw=true" alt="detect_image" width="22.75%">
-  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_angles.png?raw=true" alt="detect_angles" width="25.5%">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_image.png?raw=true" width="22.75%">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_angles.png?raw=true" width="25.5%">
 </p>
 
 The detection is fully programmed in Python and runs on the computer or device connected to the Arduino via Serial.
@@ -236,7 +243,7 @@ Finally, we developed a simple interface for users to interact with the program.
 This part is also developed in Python, and here is an image of the developed interface:
 
 <p align="center">
-  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/interfaz.png?raw=true" alt="interfaz" width="52.75%">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/interfaz.png?raw=true" width="52.75%">
 </p>
 
 The complete code is in [mano_zeus.py](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/src/handTracking/mano_zeus.py).
