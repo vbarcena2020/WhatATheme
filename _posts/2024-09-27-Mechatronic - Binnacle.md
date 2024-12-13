@@ -27,45 +27,45 @@ This post will show you how I progress in the subject "Mecatronica" learning new
 In this labs we learn how to used the basics comands of github to update all our content to the github repositories. Also we learn how to do that in VSCode in a graphic form. I will use the terminal to update the code because I found it more simple due to I get used to it all these years. The mor important comands are:
 
 To clone in local the repository:
-
-        $ git clone [url of the repository]
-
+~~~
+$ git clone [url of the repository]
+~~~
 To know the local status of the git repository:
-
-        $ git status
-
+~~~
+$ git status
+~~~
 To add the new files, or the changes done in the other files:
-
-        $ git add [files names]
-
+~~~
+$ git add [files names]
+~~~
 To add a comment and commit the changes done:
-
-        $ git commit -m 'comentario'
-
+~~~
+$ git commit -m 'comentario'
+~~~
 To push the changes to the online repository:
-
-        $ git push
-
+~~~
+$ git push
+~~~
 To pull the changes form the online repository:
-
-        $ git pull
-
+~~~
+$ git pull
+~~~
 To merge the changes or two branches use:
-
-        $ git merge [branches]
-
+~~~
+   $ git merge [branches]
+~~~
 To create a new branch:
-
-        $ git branch [name of the new branch]
-
+~~~
+$ git branch [name of the new branch]
+~~~
 To change between branches:
-
-        $ git checkout [name of the branch]
-
+~~~
+$ git checkout [name of the branch]
+~~~
 To create and change to the new branch:
-
-        $ git checkout -b [name of the new branch]
-
+~~~
+$ git checkout -b [name of the new branch]
+~~~
 These are the basics commands I used.
 
 # **Learning Inksacape 2D Design**
@@ -74,19 +74,18 @@ Then after learning how to use the program and design some things in 2D I try to
 
 The design is the following:
 
-<br>
-<image src="https://github.com/vbarcena2020/Mecatronica-2024-2025/blob/main/L5/Mano.svg?raw=true"></image> 
-<br>
-
+<p align="center">
+  <img src="https://github.com/vbarcena2020/Mecatronica-2024-2025/blob/main/L5/Mano.svg?raw=true" alt="interfaz" width="32.75%">
+</p>
 
 # **Learning FreeCAD 3D Design**
 After learning how to create a simple model of the hand in Inksacape in 2D I try to create a simple structure of all the pieces of which the hand that we want to design and create is composed of. The 
 
-La estructura se encuentra en el siguiente link: ![Mano.FCStd](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/images/Mano.FCStd)
+La estructura se encuentra en el siguiente link: [Mano.FCStd](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/images/Mano.FCStd)
 
-<br>
-<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/simple_mano_3d.png?raw=true"></image> 
-<br>
+<p align="center">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/simple_mano_3d.png?raw=true" alt="interfaz" width="32.75%">
+</p>
 
 En cuanto al resto de diseño 3D hemos utilizado Ultimaker Cura para diseñar las piezas basandonos en el proyecto original del cual hemos sacado la idea. Hemos modificado los archivos (.lts) de los componentes aportando diferentes valores para obtener la mejor impresión de las piezas en nuestras impresoras 3D.
 
@@ -95,29 +94,149 @@ To create and design the electronic circuit, fristly, we have to decide which co
 
 For the control of the hardware we are going to use an Arduino UNO which can be replace by an Arduino Mega if we want to add more components. 
 
-<br>
-<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/arduinos.jpg?raw=true"></image> 
-<br>
+<p align="center">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/arduinos.jpg?raw=true" alt="interfaz" width="32.75%">
+</p>
 
 The rest of components are six servos per hand, one for each finger and other for the wrist. This 360 servos model we are going to use are the tower pro mg996r.
 
-<br>
-<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/servo.jpg?raw=true"></image> 
-<br>
+<p align="center">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/servo.jpg?raw=true" alt="interfaz" width="22.75%">
+</p>
 
-And to connect all the servos and the arduino we use cables and a protoboard.
+Also we have to use a battery to suply the servos with the energy needed.
+
+<p align="center">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/battery.png?raw=true" alt="interfaz" width="22.75%">
+</p>
+
+And to connect all the components we use cables and a protoboard.
 
 To visualize the design I use Fritzing and app which allow us create electronic designs, and this is our:
 
-<br>
-<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design.png?raw=true"></image> 
-<br>
+<p align="center">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design.png?raw=true" alt="interfaz" width="42.75%">
+</p>
+
 
 After trying the code with this connection the servos move to slow or doesn't have the strong to move the fingers. This happend because the 5V that gives the arduino to the servos is not enough to move the fingers so to fix it I am gonna add a battery to provaid Voltage to the servos.
 
 So the new design is the following:
 
-<br>
-<image src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design_2.png?raw=true"></image> 
-<br>
+<p align="center">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/fritzing_design_2.png?raw=true" alt="interfaz" width="42.75%">
+</p>
 
+# Zeus Hand Code
+
+The hand code is developed in three languages: C++, Arduino, and Python.
+
+## Installation
+
+To ensure the program works correctly, it is necessary to install some libraries beforehand, in addition to the languages used.
+
+Libraries used:
+
+| Library       | Terminal Command       | Utility                          |
+|:------------- |:----------------------:| :-------------------------------|
+| numpy         | pip install numpy      | Create and use vectors           |
+| tkinter       | pip install tkinter    | Create an interactive interface  |
+| mediapipe     | pip install mediapipe  | Detect bodies, arms, and hands   |
+| pillow        | pip install pillow     | Process images                   |
+
+Regarding the development of the hand code, we divided it into several parts:
+
+## Movement
+
+The first part focuses on hand movement. Here, we only concentrated on producing the movement of the fingers and wrist using servomotors. This part is programmed in Arduino and C++.
+
+To start, we tried to understand how our servos worked. They move by receiving a value from 0 to 180, which represent speeds. The value 90 indicates zero speed; above this, the servo rotates counterclockwise, and below, it rotates clockwise.
+
+To test the correct operation of the servos, we used a simple code that rotates the servos in both directions alternately.
+
+~~~
+#include <Servo.h>
+
+Servo myservo; 
+int currentPos = 0;
+int targetPos = 90;
+int speedLeft = 80;
+int speedRight = 100;
+int stopSpeed = 90;
+
+void setup() {
+  myservo.attach(3);
+  myservo.write(stopSpeed);
+  delay(1000);
+}
+
+void loop() {
+  targetPos = 180; 
+  moveServoTo(targetPos);  
+
+  targetPos = 0;
+  moveServoTo(targetPos);
+}
+
+void moveServoTo(int targetPos) {
+  if (targetPos > currentPos) {
+    myservo.write(speedRight); 
+  } else if (targetPos < currentPos) {
+    myservo.write(speedLeft);
+  }
+  delay(2000);
+  myservo.write(stopSpeed); 
+  currentPos = targetPos;
+}
+~~~
+
+Next, we created a code that moves the servos to specific angles, estimating the time it takes to move from one angle to another. This code only requires the target angle, and it moves the servo as needed to reach that position.
+
+The complete code can be found in [ServoM.cpp](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/src/ServoM/ServoM.cpp) and [ServoM.h](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/src/ServoM/ServoM.h).
+
+## Communication
+
+After developing the servo movement code, we questioned the best way to command the movements. Several ideas came to mind.
+
+The first was to use an ESP32 and communicate with it via WiFi from the computer. However, we discarded this idea initially since we didn’t have an ESP32 and didn’t want to complicate the code with complex communication. Additionally, achieving the desired reactivity would have been challenging. However, using an ESP32 and WiFi is an idea for the final prototype.
+
+The second was serial communication. This is the method we decided to use because it is straightforward to program and provides very high reactivity. The only drawback is that the Arduino must be connected to the computer, but for now, having the Arduino accessible is not an issue.
+
+Our communication is programmed in Arduino, and the program is responsible for receiving the angles from the detection module and passing them to the movement module.
+
+The complete code is in [ServoM.ino](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/src/ServoM/ServoM.ino).
+
+## Detection
+
+After achieving good performance for servo movement and communication, we considered how to detect and determine the angles to pass to the servos.
+
+The first idea was to write the angles using a keyboard. This was the simplest option but a bit slow, as we had to manually input the angles constantly for each servo. Therefore, we discarded it immediately.
+
+The next idea was to develop sliders for all the servos and send the respective values instead of writing them. This method was simple and faster. However, although it wasn’t convenient or quick enough for the project’s goal, we kept it as a testing tool in a separate mode.
+
+<p align="center">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_manual.png?raw=true" alt="detect_manual" width="15.5%">
+</p>
+
+Finally, after much thought, we came up with an idea inspired by a course we took called Computer Vision: using a camera to capture an image of our arms and, from that image, calculating the finger angles. This approach provided constant and fast detection. The only drawback was that it was more complex to develop, but we eventually succeeded.
+
+<p align="center">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_image.png?raw=true" alt="detect_image" width="22.75%">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/detect_angles.png?raw=true" alt="detect_angles" width="25.5%">
+</p>
+
+The detection is fully programmed in Python and runs on the computer or device connected to the Arduino via Serial.
+
+The complete code is in [mano_zeus.py](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/src/handTracking/mano_zeus.py).
+
+## Interface
+
+Finally, we developed a simple interface for users to interact with the program. This allows them to choose the mode and parameters to display while observing real-time detection and the angles passed to the Arduino.
+
+This part is also developed in Python, and here is an image of the developed interface:
+
+<p align="center">
+  <img src="https://github.com/mpancracio2020/Mecatronica-Proyecto/blob/main/images/interfaz.png?raw=true" alt="interfaz" width="52.75%">
+</p>
+
+The complete code is in [mano_zeus.py](https://github.com/mpancracio2020/Mecatronica-Proyecto/tree/main/src/handTracking/mano_zeus.py).
