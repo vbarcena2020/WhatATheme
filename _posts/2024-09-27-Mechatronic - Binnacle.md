@@ -70,6 +70,24 @@ These are the basics commands I used.
 
 # **Learning Inksacape 2D Design**
 Fristly, I download the Inkscape program. 
+
+The firsts steps whit this program was to learn how to use the program creating this simples designs.
+
+<p align="center">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/Ex-01.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P1.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P2.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P3.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P4.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P5.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P6.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P7.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P8.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P9.svg?raw=true" width="32.75%">
+  <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/L3/P10.svg?raw=true" width="32.75%">
+</p>
+
+
 Then after learning how to use the program and design some things in 2D I try to create a simple design of the Proyect we are going to create "Proyecto Mano de Zeus". 
 
 The design is the following:
