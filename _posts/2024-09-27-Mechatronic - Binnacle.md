@@ -123,7 +123,7 @@ The plan drawn is the following
   <img src="../assets/images/mano.svg?raw=true" width="60%">
 </p>
 
-And the file with all the 3d design you can find it in [hand.FCStd](../assets/images/hand.FCStd).
+And the file with all the 3d design you can find it in [hand.FCStd](https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/hand.FCStd).
 
 
 # **Making Electronic Design**
