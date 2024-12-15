@@ -95,6 +95,36 @@ Also I have added a wrist and arm, connect all the blocks and create a plane.
   <img src="https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/mano_plano.svg?raw=true" width="60%">
 </p>
 
+However, this 3D model was a simplification of the real model we aimed to create and was quite far from the complexity of the actual model we used. Therefore, I set out to simulate a more realistic version of the printed model by using its dimensions to create a simpler 3D model that everyone can use and modify as needed.
+
+I created this model in FreeCAD using the "Part" tool for general 3D design and "TechDraw" tool for drafting the plan and extracting measurements.
+
+Here are images of the model I developed, which is more similar to the actual one and only covers the hand section, including slots for threading to move the fingers. The wrist and forearm are not designed.
+
+<p align="center">
+  <img src="../assets/images/dedo_3d.png?raw=true" width="228" height="150">
+  <img src="../assets/images/palma_3d.png?raw=true" width="555" height="150">
+</p>
+<p align="center">
+  <img src="../assets/images/mano_3d_1.png?raw=true" width="249.3" height="150">
+  <img src="../assets/images/mano_3d_2.png?raw=true" width="350" height="150">
+  <img src="../assets/images/mano_3d_3.png?raw=true" width="286" height="150">
+  <img src="../assets/images/mano_3d_4.png?raw=true" width="286" height="150">
+</p>
+
+This is a video of the final design.
+<p align="center">
+<img src="../assets/images/video3d.gif">
+</p>
+
+The plan drawn is the following
+<p align="center">
+  <img src="../assets/images/mano_plano.png?raw=true" width="60%">
+  <img src="../assets/images/mano.svg?raw=true" width="60%">
+</p>
+
+And the file with all the 3d design you can find it in [hand.FCStd](../assets/images/hand.FCStd).
+
 
 # **Making Electronic Design**
 To create and design the electronic circuit, fristly, we have to decide which components we are going to need and use.
