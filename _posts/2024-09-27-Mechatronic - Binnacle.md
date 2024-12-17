@@ -135,22 +135,6 @@ This is a video of the final design.
 <img src="../assets/images/video3d.gif">
 </p>
 
-The plan drawn is the following
-<p align="center">
-  <img src="../assets/images/mano_plano.png?raw=true" width="60%">
-  <img src="../assets/images/mano.svg?raw=true" width="60%">
-</p>
-
-And the file with all the 3d design you can find it in [hand.FCStd](https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/hand.FCStd).
-
-Also I have design an arm support in FreeCAD to support all the arm and hand. The 3D design is the following.
-
-<p align="center">
-  <img src="../assets/images/support_1.png?raw=true" width="249.3" height="150">
-  <img src="../assets/images/support_2.png?raw=true" width="350" height="150">
-  <img src="../assets/images/support_3.png?raw=true" width="286" height="150">
-</p>
-
 The plans drawn are the following
 
 - Finger:
@@ -184,6 +168,22 @@ The plans drawn are the following
 </p>
 
 - All parts:
+<p align="center">
+  <img src="../assets/images/mano_plano.png?raw=true" width="60%">
+  <img src="../assets/images/mano.svg?raw=true" width="60%">
+</p>
+
+And the file with all the 3d design you can find it in [hand.FCStd](https://github.com/vbarcena2020/My_personal_page/blob/master/assets/images/hand.FCStd).
+
+Also I have design an arm support in FreeCAD to support all the arm and hand. The 3D design is the following.
+
+<p align="center">
+  <img src="../assets/images/support_1.png?raw=true" width="249.3" height="150">
+  <img src="../assets/images/support_2.png?raw=true" width="350" height="150">
+  <img src="../assets/images/support_3.png?raw=true" width="286" height="150">
+</p>
+
+The plan drawn is the following
 <p align="center">
   <img src="../assets/images/soporte.png?raw=true" width="60%">
   <img src="../assets/images/soporte.svg?raw=true" width="60%">
