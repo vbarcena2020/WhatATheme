@@ -151,7 +151,39 @@ Also I have design an arm support in FreeCAD to support all the arm and hand. Th
   <img src="../assets/images/support_3.png?raw=true" width="286" height="150">
 </p>
 
-The plan drawn is the following
+The plans drawn are the following
+
+- Finger:
+<p align="center"> 
+  <img src="../assets/images/finger.png?raw=true" width="45%"> 
+  <img src="../assets/images/finger.svg?raw=true" width="45%"> 
+</p>
+
+- Thumb:
+<p align="center">
+  <img src="../assets/images/thumb.png?raw=true" width="45%"> 
+  <img src="../assets/images/thumb.svg?raw=true" width="45%"> 
+</p>
+
+- Palm:
+<p align="center">
+  <img src="../assets/images/palma1.png?raw=true" width="45%"> 
+  <img src="../assets/images/palma1.svg?raw=true" width="45%"> 
+</p>
+
+- Ring palm:
+<p align="center">
+  <img src="../assets/images/palma2.png?raw=true" width="45%"> 
+  <img src="../assets/images/palma2.svg?raw=true" width="45%"> 
+</p>
+
+- Pinky palm:
+<p align="center">
+  <img src="../assets/images/palma3.png?raw=true" width="45%"> 
+  <img src="../assets/images/palma3.svg?raw=true" width="45%"> 
+</p>
+
+- All parts:
 <p align="center">
   <img src="../assets/images/soporte.png?raw=true" width="60%">
   <img src="../assets/images/soporte.svg?raw=true" width="60%">
